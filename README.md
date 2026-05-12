@@ -116,3 +116,22 @@ Se calculó la correlación de cada variable con `FraudFound_P`. Las variables c
 - [ ] Entrenamiento de modelos de clasificación (Árbol de decisión, Random Forest, XGBoost, etc.).
 - [ ] Manejo del desbalance de clases (SMOTE, class_weight, etc.).
 - [ ] Evaluación de métricas (Recall, Precision, AUC-ROC).
+---
+
+##  Actualizacion: comparacion con PyCaret
+
+Al final de `Fase1_datos.ipynb` se anadio una celda simplificada que:
+
+- Usa el datasheet ya procesado durante el notebook (`df`).
+- Entrena y compara modelos con PyCaret.
+- Muestra solo las metricas por modelo:
+  `Model`, `Accuracy`, `AUC`, `Recall`, `Prec.`, `F1`, `Kappa`, `MCC`.
+
+Significado de metricas:
+- `Accuracy`: proporcion total de predicciones correctas.
+- `AUC`: capacidad del modelo para separar clases (mas alto, mejor discriminacion).
+- `Recall`: porcentaje de fraudes reales detectados.
+- `Prec.` (Precision): porcentaje de alertas de fraude que realmente son fraude.
+- `F1`: balance entre precision y recall.
+- `Kappa`: acuerdo del modelo respecto a la verdad, ajustado por azar.
+- `MCC`: correlacion entre predicciones y clases reales, robusta en datos desbalanceados.
